@@ -46,12 +46,19 @@ describe('Controller Function tests', () => {
         departmentId: 1,
         roleId: 3,
       },
+      {
+        employeeId: 4,
+        name: 'Ankit Chitrakar',
+        email: 'ankit.chitrakar@example.com',
+        departmentId: 1,
+        roleId: 2,
+      }
     ];
 
     getAllEmployees.mockReturnValue(mockedEmployees);
     let result = getAllEmployees();
     expect(result).toEqual(mockedEmployees);
-    expect(result.length).toBe(3);
+    expect(result.length).toBe(4);
   });
 });
 
@@ -82,9 +89,16 @@ describe('API Endpoint tests', () => {
           departmentId: 1,
           roleId: 3,
         },
+        {
+          employeeId: 4,
+          name: 'Ankit Chitrakar',
+          email: 'ankit.chitrakar@example.com',
+          departmentId: 1,
+          roleId: 2,
+        }
       ],
     });
-    expect(res.body.employees.length).toBe(3);
+    expect(res.body.employees.length).toBe(4);
   });
 
   it('GET /employees/details/:id should get an employee by ID', async () => {

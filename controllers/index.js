@@ -20,6 +20,13 @@ let employees = [
     departmentId: 1,
     roleId: 3,
   },
+  {
+    employeeId: 4,
+    name: 'Ankit Chitrakar',
+    email: 'ankit.chitrakar@example.com',
+    departmentId: 1,
+    roleId: 2,
+  }
 ];
 
 function getAllEmployees() {
